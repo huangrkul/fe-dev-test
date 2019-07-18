@@ -62,14 +62,14 @@
 }
 
 .tac-title {
-  background: rgb(240,228,210);
-  background: linear-gradient(180deg, rgba(240,228,210,1) 30%, rgba(250,184,60,1) 60%);
+  background: $headline-grad-lgt;
+  background: linear-gradient(180deg, $headline-grad-lgt 30%, $headline-grad-drk 60%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .tac-title-shadow {
-  text-shadow: 6px 6px 9px rgba(0, 0, 0, 0.33);
+  text-shadow: 1px 1px 7px #000000;
 }
 
 .tac-text {
@@ -79,6 +79,6 @@
   margin: 0 auto;
   font-size: $size18;
   color: $site-white;
-  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.33);
+  text-shadow: 1px 1px 7px #000000;
   padding-bottom: 1em;
 }

@@ -1,0 +1,148 @@
+.races-section {
+  padding-top: 1em;
+  padding-bottom: 3em;
+  width: 100%;
+  height: auto;
+  background-color: $combat-bg;
+  background-image:url("../images/background_races.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+
+// divider style////////////////////
+.divider {
+  width: 100%;
+  text-align: center;
+}
+
+@media (max-width: 1350px) {
+  .divider {
+    margin-top: -2.8em;
+  }
+  .divider-img {
+    max-width: 744px;
+
+  }
+}
+
+@media (min-width: 1351px) {
+  .divider {
+    margin-top: -4.3em;
+  }
+  .divider-img {
+    max-width: 1350px;
+  }
+}
+
+// races title style/////////////////
+.races-title-container {
+  position: relative;
+  margin-top: 1.5em;
+  margin-left: 15%;
+  height: $size72;
+}
+
+.races-title, .races-title-shadow {
+  font-size: $size72;
+  position: absolute;
+  top: 0px;
+}
+
+.races-title {
+  background: $headline-grad-lgt;
+  background: linear-gradient(180deg, $headline-grad-lgt 30%, $headline-grad-drk 60%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.races-title-shadow {
+  //color: $site-white;
+  text-shadow: 1px 1px 7px #000000;
+}
+
+// races image/text style //////////////////
+.races-bio-container {
+  margin-top: 14em;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 12.5em;
+  background: $headline-grad-lgt;
+  background: linear-gradient(to right, $headline-grad-lgt 0%, $headline-grad-drk 20%, $headline-grad-drk 80%, $headline-grad-lgt 100%);
+}
+
+.race-img-box, race-txt-box {
+  position: relative;
+}
+
+.race-img-box {
+  flex: 0 0 20%;
+}
+
+.race-txt-box {
+  flex: 0 0 30%;
+  text-align: center;
+  padding: 1em 4em;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.race-img {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  margin-top: -37%;
+  width: 100%;
+  height: auto;
+}
+
+.race-title {
+  color: $site-black;
+  font-size: $size48;
+}
+
+.race-desc {
+  color: $site-black;
+  font-size: $size21;
+}
+
+// races icons style //////////////////////////
+.races-icons {
+  margin-top: 10em;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  //flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+}
+
+.race-btn {
+  margin: 1em;
+}
+
+.race-btn-img-box {
+  transform:skewX(-8deg);
+  -webkit-transform:skewX(-8deg);
+  padding: 0.2em;
+  background-color: rgba(240,228,210,0.8);
+  border: 4px solid $race-grad-drk;
+  border-radius: 0.5em;
+}
+
+.btn-img {
+  transform:skewX(8deg);
+  -webkit-transform:skewX(8deg);
+  width: 100%;
+}
+
+.race-label {
+  margin-top: 0.3em;
+  font-family: $Montserrat;
+  font-size: $size16;
+  color: $site-black;
+  text-align: center;
+}

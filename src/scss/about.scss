@@ -1,6 +1,8 @@
 @import "global";
 @import "header";
 @import "gameplay";
+@import "races";
+
 /*
 Fonts from mock up:
 
@@ -56,10 +58,31 @@ Race icon button (#fab83c or rgb(250,184,60))
   font-style: italic;
 }
 
+.abs{
+  position: absolute;
+}
+
+.hide {
+  opacity: 0;
+}
+
 .about-body {
   margin: 0;
   padding: 0;
   a {
     text-decoration: none;
   }
+}
+
+// footer style////////////////////
+.footer {
+  background-color: $emeBar-main;
+  height: 8em;
+}
+
+.copyright {
+  text-align: center;
+  padding-top: 2em;
+  color: $site-white;
+  font-size: $size14;
 }
