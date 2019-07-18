@@ -13,7 +13,7 @@ app.get('/', (req, res) => {
     res.send(fileContent);
 });
 
-// Set up about page route here
+// Set up about page route here./
 
 // Set up a static directory for css, js, and images
 app.use(express.static(path.resolve(__dirname, '../dist')));
@@ -22,4 +22,3 @@ app.listen(PORT, () => {
     console.log(`App listening to ${PORT}...`);
     console.log('Press Ctrl+C to quit.');
 });
-

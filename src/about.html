@@ -6,7 +6,57 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>About TERA | En Masse Entertainment</title>
 </head>
-<body>
-  
+<body class="about-body">
+
+<!-- SECTION 1 EME AND MENU BAR-->
+<section id="headerBar" class="header-bar">
+  <!-- en masse logo bar -->
+  <div class="eme-bar">
+    <div class="eme-logo"><img src="images/enmasse_logo.png"></div>
+    <div class="eme-account robo bold"><a class="link-account" href="http://account.enmasse.com" target="_blank">My Account</a></div>
+  </div>
+
+  <!-- en masse main menu -->
+  <div class="menu-bar">
+    <div class="tera-logo"><a href="https://www.enmasse.com/games/tera" target="_blank"><img src="images/tera-logo.png"></a></div>
+    <div class="btn-gameplay mont"><a class="link-menubtn" href="">GAMEPLAY</a></div>
+    <div class="btn-races mont"><a class="link-menubtn" href="">RACES</a></div>
+    <!-- this is the space between menu items and play-now-btn -->
+    <div class="menu-space"></div>
+    <!-- play button -->
+    <a class="link-playnow" href="http://tera.enmasse.com/download" target="_blank"><div class="btn-playNow mont">PLAY NOW</div></a>
+  </div>
+</section>
+
+<!-- SECTION 2 GAMEPLAY VIDEO -->
+<section id="gameplay" class="gameplay-section">
+
+    <!-- video container -->
+    <div class="video-container">
+      <video id="vidTera" class="vid-tera" autoplay loop poster href="images/what_tera_poster.jpg">
+        <source src="http://willhuanganimator.com/media/action_thumb.mp4" type="video/mp4"><!-- having issue loading video through localhost (weird linux security issue?), instead loading them online. -->
+        <source src="http://willhuanganimator.com/media/action_thumb.webm" type="video/webm"><!-- having issue loading video through localhost (weird linux security issue?), instead loading them online. -->
+        Your browser does not support the video tag.
+      </video>
+      <a href="https://www.youtube.com/watch?time_continue=2&v=2Le_VBtChpc" target="_blank"><div class="play-overlay"><img class="overlay-img" src="images/play.png"></div></a>
+    </div>
+
+    <!-- true combat text section-->
+    <div class="tac-title-container">
+      <div class="tac-title-shadow mont">TRUE ACTION COMBAT</div>
+      <div class="tac-title mont">TRUE ACTION COMBAT</div>
+    </div>
+
+    <div class="tac-text robo">
+      <p>
+        In <span class="ita">TERA</span>, you aim, dodge, and time your attacks for an intense and rewarding tactical combat experience.
+        <span class="ita">TERA</span>’s expansive content is totally free to play, from character creation all the way to level 70 and beyond.
+      </p>
+    </div>
+</section>
+
+<section>
+</section>
+
 </body>
 </html>

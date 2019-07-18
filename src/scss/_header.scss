@@ -1,0 +1,76 @@
+.header-bar {
+  width: 100%;
+}
+
+.header-bar-active {
+  position: fixed;
+}
+
+// eme-bar style//////////////////////////////
+.eme-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $emeBar-main;
+  width: 100%;
+  min-height: 70px;
+  border-bottom: 3px solid $emeBar-border;
+}
+
+.eme-logo {
+  padding: 0 1em;
+}
+
+.eme-account {
+  padding-right: 1em;
+  text-align: right;
+  font-size: $size14;
+  color: $site-white;
+}
+
+a.link-account:link { color:$site-white;}
+a.link-account:visited { color: $site-white;}
+a.link-account:hover { color: $link-active;}
+a.link-account:active { color: $link-active;}
+
+
+// menu bar style///////////////////////////
+.menu-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 75px;
+  margin: 0 auto;
+  background: radial-gradient(circle farthest-corner,$menu-grad-drk, $menu-grad-lgt);
+  div {
+    margin: 0 1em;
+  }
+}
+
+.btn-gameplay, .btn-races {
+  font-size: $size16;
+}
+
+a.link-menubtn:link { color:$site-black;}
+a.link-menubtn:visited { color: $site-black;}
+a.link-menubtn:hover { color: $link-active;}
+a.link-menubtn:active { color: $link-active;}
+
+.menu-space {
+  flex-grow:0.5;
+}
+
+.btn-playNow {
+  color: $site-white;
+  text-decoration: none;
+  font-size: $size18;
+  padding: 0.4em 1.5em;
+  background-color: $play-btn-bg;
+  border: 2px solid $play-btn-border;
+  border-radius: 0.4em;
+}
+
+.btn-playNow:hover {
+  color: $site-black;
+}
