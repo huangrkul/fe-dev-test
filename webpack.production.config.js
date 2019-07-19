@@ -6,7 +6,10 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 module.exports = {
     entry: {
         'index': './src/index.js',
-        'about': './src/about.js'
+        'about': './src/about.js',
+        'js_utils': './src/js/js_utils.js',
+        'scroll_functions': './src/js/scroll_functions.js',
+        'scroll_triggers': './src/js/scroll_triggers.js'
     },
     output: {
         path: path.join(__dirname, './dist'),

@@ -3,7 +3,7 @@
   padding-bottom: 3em;
   width: 100%;
   height: auto;
-  background-color: $combat-bg;
+  background-color: $race-bg;
   background-image:url("../images/background_races.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -78,7 +78,7 @@
 }
 
 .race-img-box {
-  flex: 0 0 20%;
+  flex: 0 0 22%;
 }
 
 .race-txt-box {
@@ -117,11 +117,12 @@
   //flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  width: 40%;
+  width: 45%;
 }
 
 .race-btn {
   margin: 1em;
+  cursor: pointer;
 }
 
 .race-btn-img-box {
@@ -145,4 +146,13 @@
   font-size: $size16;
   color: $site-black;
   text-align: center;
+}
+
+.race-btn:hover, .race-label:hover {
+  .race-label {
+    color: $link-active;
+  }
+  .race-btn-img-box {
+    background-color: rgba(240,228,210,1);
+  }
 }

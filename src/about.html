@@ -12,15 +12,15 @@
 <section id="headerBar" class="header-bar">
   <!-- en masse logo bar -->
   <div class="eme-bar">
-    <div class="eme-logo"><img src="images/enmasse_logo.png"></div>
+    <div class="eme-logo"><a href="http://tera.enmasse.com" target="_blank"><img src="images/enmasse_logo.png"></div>
     <div class="eme-account robo bold"><a class="link-account" href="http://account.enmasse.com" target="_blank">My Account</a></div>
   </div>
 
   <!-- en masse main menu -->
   <div class="menu-bar">
     <div class="tera-logo"><a href="https://www.enmasse.com/games/tera" target="_blank"><img src="images/tera-logo.png"></a></div>
-    <div class="btn-gameplay mont"><a class="link-menubtn" href="">GAMEPLAY</a></div>
-    <div class="btn-races mont"><a class="link-menubtn" href="">RACES</a></div>
+    <div class="btn-gameplay mont"><a class="link-menubtn" href="#gameplay">GAMEPLAY</a></div>
+    <div class="btn-races mont"><a class="link-menubtn" href="#races">RACES</a></div>
     <!-- this is the space between menu items and play-now-btn -->
     <div class="menu-space"></div>
     <!-- play button -->
@@ -29,13 +29,14 @@
 </section>
 
 <!-- SECTION 2 GAMEPLAY VIDEO -->
-<section id="gameplay" class="gameplay-section">
+<a class="anchor" id="gameplay"></a>
+<section class="gameplay-section">
 
     <!-- video container -->
     <div class="video-container">
       <video id="vidTera" class="vid-tera" autoplay loop poster href="images/what_tera_poster.jpg">
-        <source src="http://willhuanganimator.com/media/action_thumb.mp4" type="video/mp4"><!-- having issue loading video through localhost (weird linux security issue?), instead loading them online. -->
-        <source src="http://willhuanganimator.com/media/action_thumb.webm" type="video/webm"><!-- having issue loading video through localhost (weird linux security issue?), instead loading them online. -->
+        <source src="http://willhuanganimator.com/media/action_thumb.mp4" type="video/mp4">
+        <source src="http://willhuanganimator.com/media/action_thumb.webm" type="video/webm">
         Your browser does not support the video tag.
       </video>
       <a href="https://www.youtube.com/watch?time_continue=2&v=2Le_VBtChpc" target="_blank"><div class="play-overlay"><img class="overlay-img" src="images/play.png"></div></a>
@@ -56,7 +57,8 @@
 </section>
 
 <!-- SECTION 3 RACES -->
-<section id="races" class="races-section">
+<a class="anchor" id="races"></a>
+<section class="races-section">
   <!-- divider -->
   <div class="divider"><img class="divider-img" src="images/divider.png"></div>
 
@@ -80,11 +82,8 @@
     </div>
 
     <div class="race-txt-box">
-      <div class="race-title mont">Aman</div>
-      <p class="race-desc robo">
-        Amani are always the loudest voices in defense of freedom—either their own,
-        or someone else’s—and once given, will never go back on their word.
-      </p>
+      <div id="raceTitle" class="race-title mont"></div>
+      <p id="raceDesc" class="race-desc robo"></p>
     </div>
   </div>
 
@@ -147,5 +146,12 @@
   <div class="copyright robo">&copy; Copyright 2019.  En Masse Entertainment, Inc. All Rights Reserved.</div>
 </div>
 
+<!-- scripts -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="js/js_utils.js"></script>
+<script src="js/scroll_functions.js"></script>
+<script src="js/scroll_triggers.js"></script>
 </body>
 </html>

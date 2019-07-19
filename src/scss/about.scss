@@ -1,3 +1,5 @@
+@import "mixins/compiler-animations";
+@import "animations";
 @import "global";
 @import "header";
 @import "gameplay";
@@ -72,6 +74,13 @@ Race icon button (#fab83c or rgb(250,184,60))
   a {
     text-decoration: none;
   }
+}
+
+a.anchor {
+  display: block;
+  position: relative;
+  top: -155px;
+  visibility: hidden;
 }
 
 // footer style////////////////////

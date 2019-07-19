@@ -1,9 +1,9 @@
 .header-bar {
   width: 100%;
-}
-
-.header-bar-active {
-  position: fixed;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0px;
+  z-index: 10;
 }
 
 // eme-bar style//////////////////////////////
@@ -18,6 +18,7 @@
 }
 
 .eme-logo {
+  margin-top: 0.4em;
   padding: 0 1em;
 }
 
@@ -66,11 +67,13 @@ a.link-menubtn:active { color: $link-active;}
   text-decoration: none;
   font-size: $size18;
   padding: 0.4em 1.5em;
-  background-color: $play-btn-bg;
-  border: 2px solid $play-btn-border;
+  background-color: rgba(0,199,250,0.6);
+  border: 2px solid $play-btn;
   border-radius: 0.4em;
+  transition: all 300ms ease-in-out;
 }
 
 .btn-playNow:hover {
   color: $site-black;
+  background-color: rgba(0,199,250,0.3);
 }

@@ -1,0 +1,60 @@
+.fadein-left
+  +animation-base(fadein-left, 300ms, ease-out)
++keyframes-custom(fadein-left)
+  0%
+    opacity: 0
+    +transform(translateX(-30px))
+  100%
+    opacity: 1
+    +transform(translateX(0px))
+
+.fadeout-right
+  +animation-base(fadeout-right, 300ms, ease-in)
++keyframes-custom(fadeout-right)
+  0%
+    opacity: 1
+    +transform(translateX(0px))
+  100%
+    opacity: 0
+    +transform(translateX(30px))
+
+.fadein-left-stagger
+  +animation-base(fadein-left-stagger, 400ms, ease-out)
++keyframes-custom(fadein-left-stagger)
+  0%, 20%
+    opacity: 0
+    +transform(translateX(-30px))
+  100%
+    opacity: 1
+    +transform(translateX(0px))
+
+.fadeout-right-stagger
+  +animation-base(fadeout-right-stagger, 400ms, ease-in)
++keyframes-custom(fadeout-right-stagger)
+  0%, 20%
+    opacity: 1
+    +transform(translateX(0px))
+  100%
+    opacity: 0
+    +transform(translateX(30px))
+
+.zoom-enter
+  +animation-base(zoom-enter, 300ms, ease-in)
++keyframes-custom(zoom-enter)
+  0%
+    opacity: 0
+    +transform(scale(0.7,0.7))
+  100%
+    opacity: 1
+    +transform(scale(1,1))
+
+
+.zoom-out
+  +animation-base(zoom-out, 300ms, ease-in)
++keyframes-custom(zoom-out)
+  0%
+    opacity: 1
+    +transform(scale(1,1))
+  100%
+    opacity: 0
+    +transform(scale(1.2,1.2))
