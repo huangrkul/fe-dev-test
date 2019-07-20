@@ -62,6 +62,7 @@ var scrollTriggerEls = [
       Utils.setAni("raceBtnImg4",600+interval*4,"icon-animate");
       Utils.setAni("raceBtnImg5",600+interval*5,"icon-animate");
       Utils.setAni("raceBtnImg6",600+interval*6,"icon-animate");
+      raceAutoTimer();
     }
   }
   // raceIcons = {
@@ -118,6 +119,9 @@ var cur = 0;
 //incoming frame
 var inc = 0;
 
+var raceTimer;
+var isStopped = false;
+
 //init defines each variable.
 function init() {
   initReady = true;
@@ -144,41 +148,71 @@ function init() {
   Utils.setAni("vidTera",800,"fadein");
 }
 
+function raceAutoTimer() {
+  if(!isStopped){
+    raceTimer = window.setInterval(raceCarousel,8000);
+  }
+}
+
+function raceCarousel() {
+  if(inc < raceBtnArray.length - 1){
+    inc++;
+  } else {
+    inc = 0;
+  }
+  raceSwap();
+}
+
 //handle incoming click event listeners for race buttons
 function raceSelector(e) {
-  var inc = e.currentTarget.getAttribute('data-img');
+  clearInterval(raceTimer);
+  isStopped = true;
+  inc = e.currentTarget.getAttribute('data-img');
   if(cur != inc){
-    for (var i = 0; i < raceBtnArray.length; i++) {
-      raceBtnArray[i].removeEventListener("click",raceSelector);
-    }
-    raceImgArray[cur].classList.add('zoom-out');
-    raceTitle.classList.add('fadeout-right');
-    raceDesc.classList.add('fadeout-right-stagger');
+    raceSwap();
+  } else {
+    setTimeout(function(){
+      isStopped = false;
+      raceAutoTimer();
+    },1000)
+  }
+}
+
+function raceSwap() {
+  for (var i = 0; i < raceBtnArray.length; i++) {
+    raceBtnArray[i].removeEventListener("click",raceSelector);
+  }
+  raceImgArray[cur].classList.add('zoom-out');
+  raceTitle.classList.add('fadeout-right');
+  raceDesc.classList.add('fadeout-right-stagger');
+
+  setTimeout(function(){
+    raceImgArray[cur].classList.add('hide');
+    raceImgArray[cur].classList.remove('zoom-out');
+    raceImgArray[cur].classList.remove('zoom-enter');
+
+    raceImgArray[inc].classList.add('zoom-enter');
+    raceImgArray[inc].classList.remove('hide');
+
+    raceTitle.innerHTML = raceTitleArray[inc];
+    raceTitle.classList.remove('fadeout-right');
+    raceTitle.classList.add('fadein-left');
+
+    raceDesc.innerHTML = raceDescArray[inc];
+    raceDesc.classList.remove('fadeout-right-stagger');
+    raceDesc.classList.add('fadein-left-stagger');
 
     setTimeout(function(){
-      raceImgArray[cur].classList.add('hide');
-      raceImgArray[cur].classList.remove('zoom-out');
-      raceImgArray[cur].classList.remove('zoom-enter');
-
-      raceImgArray[inc].classList.add('zoom-enter');
-      raceImgArray[inc].classList.remove('hide');
-
-      raceTitle.innerHTML = raceTitleArray[inc];
-      raceTitle.classList.remove('fadeout-right');
-      raceTitle.classList.add('fadein-left');
-
-      raceDesc.innerHTML = raceDescArray[inc];
-      raceDesc.classList.remove('fadeout-right-stagger');
-      raceDesc.classList.add('fadein-left-stagger');
-
-      setTimeout(function(){
-        for (var i = 0; i < raceBtnArray.length; i++) {
-          raceBtnArray[i].addEventListener("click",raceSelector);
-          cur = inc;
-        }
-      }, 400);
+      for (var i = 0; i < raceBtnArray.length; i++) {
+        raceBtnArray[i].addEventListener("click",raceSelector);
+      }
+      cur = inc;
+      if(isStopped){
+        isStopped = false;
+        raceAutoTimer();
+      }
     }, 400);
-  }
+  }, 400);
 }
 
 // Scroll Event cycle functions////////////////////////////////////////////////////////////////////////
