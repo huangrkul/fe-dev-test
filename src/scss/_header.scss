@@ -49,8 +49,8 @@ a.link-account:active { color: $link-active;}
   }
 }
 
-.btn-gameplay, .btn-races {
-  font-size: $size16;
+.tera-logo-img {
+  width: 100%;
 }
 
 a.link-menubtn:link { color:$site-black;}
@@ -63,10 +63,9 @@ a.link-menubtn:active { color: $link-active;}
 }
 
 .btn-playNow {
+  text-align:center;
   color: $site-white;
   text-decoration: none;
-  font-size: $size18;
-  padding: 0.4em 1.5em;
   background-color: rgba(0,199,250,0.6);
   border: 2px solid $play-btn;
   border-radius: 0.4em;
@@ -76,4 +75,30 @@ a.link-menubtn:active { color: $link-active;}
 .btn-playNow:hover {
   color: $site-black;
   background-color: rgba(0,199,250,0.3);
+}
+
+@media(max-width: 604px) {
+  .btn-gameplay, .btn-races {
+    font-size: 0.7em;
+  }
+  .btn-playNow {
+    font-size: $size16;
+    padding: 0.4em 1em;
+  }
+  .menu-space {
+    display:none;
+  }
+}
+
+@media(min-width: 605px) {
+  .btn-gameplay, .btn-races {
+    font-size: $size16;
+  }
+  .btn-playNow {
+    font-size: $size18;
+    padding: 0.4em 1.5em;
+  }
+  .menu-space {
+    flex-grow:0.5;
+  }
 }

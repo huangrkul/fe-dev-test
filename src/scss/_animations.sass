@@ -1,3 +1,11 @@
+.fadein
+  +animation-base(fadein, 300ms, ease-in)
++keyframes-custom(fadein)
+  0%
+    opacity: 0
+  100%
+    opacity: 1
+
 .fadein-left
   +animation-base(fadein-left, 300ms, ease-out)
 +keyframes-custom(fadein-left)
@@ -58,3 +66,42 @@
   100%
     opacity: 0
     +transform(scale(1.2,1.2))
+
+
+.expand-out
+  +animation-base(expand-out, 800ms, ease-in-out)
++keyframes-custom(expand-out)
+  0%
+    opacity: 0
+    +transform(scale(0.01, 0.01))
+  60%
+    opacity: 1
+    +transform(scale(1, 0.01))
+  65%
+    opacity: 1
+    +transform(scale(1, 0.01))
+  100%
+    opacity: 1
+    +transform(scale(1, 1))
+
+.icon-animate
+  +animation-base(icon-animate, 500ms, ease-in)
++keyframes-custom(icon-animate)
+  0%
+    opacity: 0
+    +transform(translate(-10px, 50px))
+  60%
+    opacity: 1
+    +transform(translate(0px, 0px))
+  70%
+    opacity: 1
+    +transform(translate(1px, -8px))
+  80%
+    opacity: 1
+    +transform(translate(0px, 0px))
+  90%
+    opacity: 1
+    +transform(translate(-0.5px, 4px))
+  100%
+    opacity: 1
+    +transform(translate(0px, 0px))

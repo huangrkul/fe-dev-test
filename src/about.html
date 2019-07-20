@@ -18,7 +18,7 @@
 
   <!-- en masse main menu -->
   <div class="menu-bar">
-    <div class="tera-logo"><a href="https://www.enmasse.com/games/tera" target="_blank"><img src="images/tera-logo.png"></a></div>
+    <div class="tera-logo"><a href="https://www.enmasse.com/games/tera" target="_blank"><img class="tera-logo-img" src="images/tera-logo.png"></a></div>
     <div class="btn-gameplay mont"><a class="link-menubtn" href="#gameplay">GAMEPLAY</a></div>
     <div class="btn-races mont"><a class="link-menubtn" href="#races">RACES</a></div>
     <!-- this is the space between menu items and play-now-btn -->
@@ -33,8 +33,8 @@
 <section class="gameplay-section">
 
     <!-- video container -->
-    <div class="video-container">
-      <video id="vidTera" class="vid-tera" autoplay loop poster href="images/what_tera_poster.jpg">
+    <div id="videoContainer" class="video-container hide">
+      <video id="vidTera" class="vid-tera hide" autoplay loop poster href="images/what_tera_poster.jpg">
         <source src="http://willhuanganimator.com/media/action_thumb.mp4" type="video/mp4">
         <source src="http://willhuanganimator.com/media/action_thumb.webm" type="video/webm">
         Your browser does not support the video tag.
@@ -71,7 +71,7 @@
   <!-- races bio container -->
   <div class="races-bio-container">
 
-    <div class="race-img-box">
+    <div id="raceImgBox" class="race-img-box hide">
       <img id="imgAman" class="race-img" src="images/races/aman.png">
       <img id="imgBara" class="race-img hide" src="images/races/baraka.png">
       <img id="imgCast" class="race-img hide" src="images/races/castanic.png">
@@ -81,58 +81,58 @@
       <img id="imgPopo" class="race-img hide" src="images/races/popori.png">
     </div>
 
-    <div class="race-txt-box">
+    <div id="raceTxtBox" class="race-txt-box hide">
       <div id="raceTitle" class="race-title mont"></div>
       <p id="raceDesc" class="race-desc robo"></p>
     </div>
   </div>
 
   <!-- races btns -->
-  <div class="races-icons">
+  <div id="raceIcons" class="races-icons">
 
-    <div id="raceBtnImg0" class="race-btn">
+    <div id="raceBtnImg0" class="race-btn hide">
       <div id="raceBtnImg" class="race-btn-img-box">
         <img class="btn-img" src="images/icons/ico_aman.png">
       </div>
       <div id="raceLabel0" class="race-label">Aman</div>
     </div>
 
-    <div id="raceBtnImg1" class="race-btn">
+    <div id="raceBtnImg1" class="race-btn hide">
       <div class="race-btn-img-box">
         <img class="btn-img" src="images/icons/ico_baraka.png">
       </div>
       <div id="raceLabel1" class="race-label">Baraka</div>
     </div>
 
-    <div id="raceBtnImg2" class="race-btn">
+    <div id="raceBtnImg2" class="race-btn hide">
       <div class="race-btn-img-box">
         <img class="btn-img" src="images/icons/ico_castanic.png">
       </div>
       <div id="raceLabel2" class="race-label">Castanic</div>
     </div>
 
-    <div id="raceBtnImg3" class="race-btn">
+    <div id="raceBtnImg3" class="race-btn hide">
       <div class="race-btn-img-box">
         <img class="btn-img" src="images/icons/ico_elin.png">
       </div>
       <div id="raceLabel3" class="race-label">Elin</div>
     </div>
 
-    <div id="raceBtnImg4" class="race-btn">
+    <div id="raceBtnImg4" class="race-btn hide">
       <div class="race-btn-img-box">
         <img class="btn-img" src="images/icons/ico_high-elf.png">
       </div>
       <div id="raceLabel4" class="race-label">High Elf</div>
     </div>
 
-    <div id="raceBtnImg5" class="race-btn">
+    <div id="raceBtnImg5" class="race-btn hide">
       <div class="race-btn-img-box">
         <img class="btn-img" src="images/icons/ico_human.png">
       </div>
       <div id="raceLabel5" class="race-label">Human</div>
     </div>
 
-    <div id="raceBtnImg6" class="race-btn">
+    <div id="raceBtnImg6" class="race-btn hide">
       <div class="race-btn-img-box">
         <img class="btn-img" src="images/icons/ico_popori.png">
       </div>
@@ -150,8 +150,5 @@
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-<script src="js/js_utils.js"></script>
-<script src="js/scroll_functions.js"></script>
-<script src="js/scroll_triggers.js"></script>
 </body>
 </html>

@@ -17,35 +17,12 @@
   text-align: center;
 }
 
-@media (max-width: 1350px) {
-  .divider {
-    margin-top: -2.8em;
-  }
-  .divider-img {
-    max-width: 744px;
-
-  }
-}
-
-@media (min-width: 1351px) {
-  .divider {
-    margin-top: -4.3em;
-  }
-  .divider-img {
-    max-width: 1350px;
-  }
-}
-
 // races title style/////////////////
 .races-title-container {
   position: relative;
-  margin-top: 1.5em;
-  margin-left: 15%;
-  height: $size72;
 }
 
 .races-title, .races-title-shadow {
-  font-size: $size72;
   position: absolute;
   top: 0px;
 }
@@ -64,11 +41,9 @@
 
 // races image/text style //////////////////
 .races-bio-container {
-  margin-top: 14em;
   display: flex;
   justify-content: center;
   width: 100%;
-  height: 12.5em;
   background: $headline-grad-lgt;
   background: linear-gradient(to right, $headline-grad-lgt 0%, $headline-grad-drk 20%, $headline-grad-drk 80%, $headline-grad-lgt 100%);
 }
@@ -77,14 +52,8 @@
   position: relative;
 }
 
-.race-img-box {
-  flex: 0 0 22%;
-}
-
 .race-txt-box {
-  flex: 0 0 30%;
   text-align: center;
-  padding: 1em 4em;
   margin-top: auto;
   margin-bottom: auto;
 }
@@ -93,42 +62,35 @@
   position: absolute;
   left: 0px;
   top: 0px;
-  margin-top: -37%;
   width: 100%;
   height: auto;
 }
 
 .race-title {
   color: $site-black;
-  font-size: $size48;
 }
 
 .race-desc {
   color: $site-black;
-  font-size: $size21;
 }
 
 // races icons style //////////////////////////
 .races-icons {
-  margin-top: 10em;
   margin-left: auto;
   margin-right: auto;
   display: flex;
-  //flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  width: 45%;
 }
 
 .race-btn {
-  margin: 1em;
   cursor: pointer;
 }
 
 .race-btn-img-box {
+  padding: 0.3em;
   transform:skewX(-8deg);
   -webkit-transform:skewX(-8deg);
-  padding: 0.2em;
   background-color: rgba(240,228,210,0.8);
   border: 4px solid $race-grad-drk;
   border-radius: 0.5em;
@@ -141,9 +103,7 @@
 }
 
 .race-label {
-  margin-top: 0.3em;
   font-family: $Montserrat;
-  font-size: $size16;
   color: $site-black;
   text-align: center;
 }
@@ -154,5 +114,410 @@
   }
   .race-btn-img-box {
     background-color: rgba(240,228,210,1);
+  }
+}
+
+//RESPONSIVE STYLING FOR ALL CLASSES
+@media (max-width: 499px) {
+  .divider {
+    margin-top: -1.7em;
+  }
+  .divider-img {
+    max-width: 300px;
+  }
+  //race headline
+  .races-title-container {
+    margin-top: 1.5em;
+    margin-left: auto;
+    margin-right: auto;
+    width: 170px;
+    height: 3em;
+  }
+
+  .races-title, .races-title-shadow {
+    font-size: 3em;
+  }
+  //race bio + images
+  .races-bio-container {
+    flex-wrap: wrap;
+    margin-top: 27em;
+    height: 12em;
+  }
+  .race-img-box {
+    flex: 0 0 58%;
+  }
+  .race-txt-box {
+    flex: 0 0 70%;
+    padding: 1em 1em;
+  }
+  .race-img {
+    margin-top: -118%;
+  }
+  .race-title {
+    font-size: 1.3em;
+  }
+  .race-desc {
+    font-size: 1em;
+  }
+  //race icons
+  .races-icons {
+    flex-wrap: nowrap;
+    margin-top: 2em;
+    width: 90%;
+  }
+  .race-btn {
+    margin-left: 0.2em;
+    margin-top: -70em;
+  }
+  .race-label {
+    display: none;
+    margin-top: 0.3em;
+    font-size: 0.68em;
+  }
+}
+@media (min-width: 500px) {
+  .divider {
+    margin-top: -1.7em;
+  }
+  .divider-img {
+    max-width: 300px;
+  }
+  //race headline
+  .races-title-container {
+    margin-top: 1.5em;
+    margin-left: auto;
+    margin-right: auto;
+    width: 170px;
+    height: 3em;
+  }
+
+  .races-title, .races-title-shadow {
+    font-size: 3em;
+  }
+  //race bio + images
+  .races-bio-container {
+    flex-wrap: wrap;
+    margin-top: 26em;
+    height: 10em;
+  }
+  .race-img-box {
+    flex: 0 0 58%;
+  }
+  .race-txt-box {
+    flex: 0 0 70%;
+    padding: 1em 1em;
+  }
+  .race-img {
+    margin-top: -118%;
+  }
+  .race-title {
+    font-size: 1.3em;
+  }
+  .race-desc {
+    font-size: 1em;
+  }
+  //race icons
+  .races-icons {
+    flex-wrap: wrap;
+    margin-top: 2em;
+    width: 80%;
+  }
+  .race-btn {
+    margin-left: 1em;
+    margin-top: 1em;
+  }
+  .race-label {
+    margin-top: 0.3em;
+    font-size: 0.68em;
+  }
+}
+
+@media (min-width: 576px) {
+  .divider {
+    margin-top: -2.4em;
+  }
+  .divider-img {
+    max-width: 560px;
+  }
+  //race headline
+  .races-title-container {
+    margin-top: 1.5em;
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
+    height: 3.5em;
+  }
+
+  .races-title, .races-title-shadow {
+    font-size: 3.5em;
+  }
+  //race bio + images
+  .races-bio-container {
+    flex-wrap: wrap;
+    margin-top: 28em;
+    height: 10em;
+  }
+  .race-img-box {
+    flex: 0 0 60%;
+  }
+  .race-txt-box {
+    flex: 0 0 50%;
+    padding: 1em 0.8em;
+  }
+  .race-img {
+    margin-top: -116%;
+  }
+  .race-title {
+    font-size: 1.6em;
+  }
+  .race-desc {
+    font-size: 1em;
+  }
+  //race icons
+  .races-icons {
+    flex-wrap: wrap;
+    margin-top: 2em;
+    width: 80%;
+  }
+  .race-btn {
+    margin-left: 1em;
+    margin-top: 1em;
+  }
+  .race-label {
+    margin-top: 0.3em;
+    font-size: 0.68em;
+  }
+}
+
+@media (min-width: 680px) {
+  //race bio + images
+  .races-bio-container {
+    flex-wrap: wrap;
+    margin-top: 28em;
+    height: 10em;
+  }
+  .race-img-box {
+    flex: 0 0 50%;
+  }
+  .race-txt-box {
+    flex: 0 0 50%;
+    padding: 1em 0.8em;
+  }
+  .race-img {
+    margin-top: -116%;
+  }
+  .race-title {
+    font-size: 1.6em;
+  }
+  .race-desc {
+    font-size: 1  }
+  //race icons
+  .races-icons {
+    flex-wrap: nowrap;
+    margin-top: 3em;
+    width: 80%;
+  }
+  .race-btn {
+    margin-left: 1em;
+  }
+  .race-label {
+    margin-top: 0.3em;
+    font-size: 0.68em;
+  }
+}
+
+@media (min-width: 768px) {
+  .divider {
+    margin-top: -2.8em;
+  }
+  .divider-img {
+    max-width: 746px;
+  }
+  //race headline
+  .races-title-container {
+    margin-top: 1.5em;
+    margin-left: 10%;
+    height: 3.5em;
+  }
+
+  .races-title, .races-title-shadow {
+    font-size: 3.5em;
+  }
+  //race bio + images
+  .races-bio-container {
+    margin-top: 10em;
+    height: 10em;
+  }
+  .race-img-box {
+    flex: 0 0 40%;
+  }
+  .race-txt-box {
+    flex: 0 0 40%;
+    padding: 1em 0.8em;
+  }
+  .race-img {
+    margin-top: -37%;
+  }
+  .race-title {
+    font-size: 1.6em;
+  }
+  .race-desc {
+    font-size: 1;
+  }
+  //race icons
+  .races-icons {
+    margin-top: 10em;
+    width: 65%;
+  }
+  .race-btn {
+    margin-left: 1em;
+  }
+  .race-label {
+    margin-top: 0.3em;
+    font-size: 0.68em;
+  }
+}
+
+@media (min-width: 860px) {
+  .races-icons {
+    margin-top: 14em;
+    width: 65%;
+  }
+}
+
+@media (min-width: 992px) {
+  .divider {
+    margin-top: -3.4em;
+  }
+  .divider-img {
+    max-width: 992px;
+  }
+  //race headline
+  .races-title-container {
+    margin-top: 1.5em;
+    margin-left: 18%;
+    height: $size72;
+  }
+
+  .races-title, .races-title-shadow {
+    font-size: $size72;
+  }
+  //race bio + images
+  .races-bio-container {
+    margin-top: 10em;
+    height: 10em;
+  }
+  .race-img-box {
+    flex: 0 0 30%;
+  }
+  .race-txt-box {
+    flex: 0 0 34%;
+    padding: 1em 1em;
+  }
+  .race-img {
+    margin-top: -37%;
+  }
+  .race-title {
+    font-size: 2em;
+  }
+  .race-desc {
+    font-size: 1em;
+  }
+  //race icons
+  .races-icons {
+    margin-top: 11em;
+    width: 60%;
+  }
+  .race-btn {
+    margin-left: 1.4em;
+  }
+  .race-label {
+    margin-top: 0.3em;
+    font-size: $size16;
+  }
+}
+
+@media (min-width: 1092px) {
+  .race-img-box {
+    flex: 0 0 26%;
+  }
+}
+
+@media (min-width: 1351px) {
+  .divider {
+    margin-top: -4.3em;
+  }
+  .divider-img {
+    max-width: 1350px;
+  }
+  //race bio + images
+  .races-bio-container {
+    margin-top: 14em;
+    height: 11em;
+  }
+  .race-img-box {
+    flex: 0 0 26%;
+  }
+  .race-txt-box {
+    flex: 0 0 32%;
+    padding: 1em 2em;
+  }
+  .race-img {
+    margin-top: -37%;
+  }
+  .race-title {
+    font-size: 2.5em;
+  }
+  .race-desc {
+    font-size: 1em;
+  }
+  //race icons
+  .races-icons {
+    margin-top: 12em;
+    width: 54%;
+  }
+  .race-btn {
+    margin-left: 1.5em;
+  }
+  .race-label {
+    margin-top: 0.3em;
+    font-size: $size16;
+  }
+}
+
+@media (min-width: 1540px) {
+  //race bio + images
+  .races-bio-container {
+    margin-top: 14em;
+    height: 12.5em;
+  }
+  .race-img-box {
+    flex: 0 0 22%;
+  }
+  .race-txt-box {
+    flex: 0 0 30%;
+    padding: 1em 4em;
+  }
+  .race-img {
+    margin-top: -37%;
+  }
+  .race-title {
+    font-size: $size48;
+  }
+  .race-desc {
+    font-size: $size21;
+  }
+
+  //race icons
+  .races-icons {
+    margin-top: 10em;
+    width: 45%;
+  }
+  .race-btn {
+    margin-left: 1.5em;
+  }
+  .race-label {
+    margin-top: 0.3em;
+    font-size: $size16;
   }
 }
