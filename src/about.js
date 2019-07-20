@@ -30,7 +30,7 @@ import './scss/about.scss';
 
 var initReady = false;
 
-// Scroll Event cycle variables////////////////////////////////////////////////////////////////////////
+// Scroll Event cycle variables//////////////////////////////////////////////////////////
 // Adapted from http://www.html5rocks.com/en/tutorials/speed/animations/
 var latestKnownScrollY = 0;
 var currentScrollY = 0;
@@ -45,6 +45,7 @@ var viewportWidth = Math.max(document.documentElement.clientWidth, window.innerW
 var raceBios
 var raceIcons;
 
+//each array item triggers depend on viewport position
 var scrollTriggerEls = [
 
   raceBios = {
@@ -52,6 +53,7 @@ var scrollTriggerEls = [
     triggered : false,
     triggerPerc : 80,
     init : function() {
+      //this initiate race section animation
       var interval = 120;
       Utils.setAni("raceImgBox",1,"zoom-enter");
       Utils.setAni("raceTxtBox",300,"fadein-left");
@@ -62,6 +64,7 @@ var scrollTriggerEls = [
       Utils.setAni("raceBtnImg4",600+interval*4,"icon-animate");
       Utils.setAni("raceBtnImg5",600+interval*5,"icon-animate");
       Utils.setAni("raceBtnImg6",600+interval*6,"icon-animate");
+      //start race auto carousel
       raceAutoTimer();
     }
   }
@@ -81,10 +84,10 @@ var scrollTriggerEls = [
   //   }
   //}
 ];
-///////////////////////////////////////////////////////////////////////////////////////////////////////
+/////Scroll Event cycle variables ENDS///////////////////////////////////////////////
 
 
-//video variable
+//video variable just in case
 var vidTera;
 
 //these variables are for race selection feature
@@ -143,6 +146,7 @@ function init() {
   window.addEventListener('scroll', onScroll, false);
   window.addEventListener('resize', onResize, false);
 
+  //initial animation upon visiting about.html
   Utils.setAni("playBtn",1,"inbottom-settle");
   Utils.setAni("videoContainer",1,"expand-out");
   Utils.setAni("vidTera",800,"fadein");
@@ -154,6 +158,7 @@ function raceAutoTimer() {
   }
 }
 
+//rotate race bio out at set interval
 function raceCarousel() {
   if(inc < raceBtnArray.length - 1){
     inc++;
@@ -165,6 +170,7 @@ function raceCarousel() {
 
 //handle incoming click event listeners for race buttons
 function raceSelector(e) {
+  //nuke raceAutoTimer when clicked
   clearInterval(raceTimer);
   isStopped = true;
   inc = e.currentTarget.getAttribute('data-img');
@@ -172,13 +178,16 @@ function raceSelector(e) {
     raceSwap();
   } else {
     setTimeout(function(){
+      //start it again if same button clicked
       isStopped = false;
       raceAutoTimer();
     },1000)
   }
 }
 
+//race transition handler
 function raceSwap() {
+  //deactivate buttons during transition
   for (var i = 0; i < raceBtnArray.length; i++) {
     raceBtnArray[i].removeEventListener("click",raceSelector);
   }
@@ -203,10 +212,12 @@ function raceSwap() {
     raceDesc.classList.add('fadein-left-stagger');
 
     setTimeout(function(){
+      //re-activate buttons
       for (var i = 0; i < raceBtnArray.length; i++) {
         raceBtnArray[i].addEventListener("click",raceSelector);
       }
       cur = inc;
+      //start auto race carousel again
       if(isStopped){
         isStopped = false;
         raceAutoTimer();
