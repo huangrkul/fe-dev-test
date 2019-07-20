@@ -139,6 +139,7 @@ function init() {
   window.addEventListener('scroll', onScroll, false);
   window.addEventListener('resize', onResize, false);
 
+  Utils.setAni("playBtn",1,"inbottom-settle");
   Utils.setAni("videoContainer",1,"expand-out");
   Utils.setAni("vidTera",800,"fadein");
 }
