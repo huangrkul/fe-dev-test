@@ -49,40 +49,40 @@ var raceIcons;
 var scrollTriggerEls = [
 
   raceBios = {
-    el : document.getElementById('raceImgBox'),
+    el : document.getElementById('raceInit'),
     triggered : false,
-    triggerPerc : 80,
+    triggerPerc : 60,
     init : function() {
       //this initiate race section animation
       var interval = 120;
       Utils.setAni("raceImgBox",1,"zoom-enter");
       Utils.setAni("raceTxtBox",300,"fadein-left");
-      Utils.setAni("raceBtnImg0",600,"icon-animate");
-      Utils.setAni("raceBtnImg1",600+interval,"icon-animate");
-      Utils.setAni("raceBtnImg2",600+interval*2,"icon-animate");
-      Utils.setAni("raceBtnImg3",600+interval*3,"icon-animate");
-      Utils.setAni("raceBtnImg4",600+interval*4,"icon-animate");
-      Utils.setAni("raceBtnImg5",600+interval*5,"icon-animate");
-      Utils.setAni("raceBtnImg6",600+interval*6,"icon-animate");
+      // Utils.setAni("raceBtnImg0",600,"icon-animate");
+      // Utils.setAni("raceBtnImg1",600+interval,"icon-animate");
+      // Utils.setAni("raceBtnImg2",600+interval*2,"icon-animate");
+      // Utils.setAni("raceBtnImg3",600+interval*3,"icon-animate");
+      // Utils.setAni("raceBtnImg4",600+interval*4,"icon-animate");
+      // Utils.setAni("raceBtnImg5",600+interval*5,"icon-animate");
+      // Utils.setAni("raceBtnImg6",600+interval*6,"icon-animate");
       //start race auto carousel
       raceAutoTimer();
     }
+  },
+  raceIcons = {
+    el : document.getElementById('iconInit'),
+    triggered : false,
+    triggerPerc : 60,
+    init : function() {
+      var interval = 120;
+      Utils.setAni("raceBtnImg0",1,"icon-animate");
+      Utils.setAni("raceBtnImg1",interval,"icon-animate");
+      Utils.setAni("raceBtnImg2",interval*2,"icon-animate");
+      Utils.setAni("raceBtnImg3",interval*3,"icon-animate");
+      Utils.setAni("raceBtnImg4",interval*4,"icon-animate");
+      Utils.setAni("raceBtnImg5",interval*5,"icon-animate");
+      Utils.setAni("raceBtnImg6",interval*6,"icon-animate");
+    }
   }
-  // raceIcons = {
-  //   el : document.getElementById('raceIcons'),
-  //   triggered : false,
-  //   triggerPerc : 99,
-  //   init : function() {
-  //     var interval = 120;
-  //     Utils.setAni("raceBtnImg0",1,"icon-animate");
-  //     Utils.setAni("raceBtnImg1",interval,"icon-animate");
-  //     Utils.setAni("raceBtnImg2",interval*2,"icon-animate");
-  //     Utils.setAni("raceBtnImg3",interval*3,"icon-animate");
-  //     Utils.setAni("raceBtnImg4",interval*4,"icon-animate");
-  //     Utils.setAni("raceBtnImg5",interval*5,"icon-animate");
-  //     Utils.setAni("raceBtnImg6",interval*6,"icon-animate");
-  //   }
-  //}
 ];
 /////Scroll Event cycle variables ENDS///////////////////////////////////////////////
 
