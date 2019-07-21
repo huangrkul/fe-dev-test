@@ -129,12 +129,13 @@ var isStopped = false;
 function init() {
   initReady = true;
   vidTera = document.getElementById("vidTera");
+  vidTera.muted - false; //in case video has audio. Otherwise video need to start muted in order to autoplay.
   raceTitle = document.getElementById("raceTitle");
   raceDesc = document.getElementById("raceDesc");
   raceImgArray = document.getElementsByClassName("race-img");
   raceBtnArray = document.getElementsByClassName("race-btn");
 
-  //add event listener and data value to all race buttons
+  //add event listener and data value to all race buttons for further manipulation
   for (var i = 0; i < raceBtnArray.length; i++) {
     raceBtnArray[i].addEventListener("click",raceSelector);
     raceBtnArray[i].setAttribute('data-img', [i]);
@@ -143,6 +144,7 @@ function init() {
   raceTitle.innerHTML = raceTitleArray[0];
   raceDesc.innerHTML = raceDescArray[0];
 
+  //eventlisteners for detecting scroll and viewport position relative to page.
   window.addEventListener('scroll', onScroll, false);
   window.addEventListener('resize', onResize, false);
 
@@ -150,8 +152,20 @@ function init() {
   Utils.setAni("playBtn",1,"inbottom-settle");
   Utils.setAni("videoContainer",1,"expand-out");
   Utils.setAni("vidTera",800,"fadein");
+
+  //trigger race section initial animation if refreshing at the bottom half of the page.
+  triggerSectionCheck();
+
+  //failsafe for if bio image isn't triggered while refreshing the page at the very bottom of the page.
+  var raceInit = document.getElementById("raceInit");
+  var raceRect = raceInit.getBoundingClientRect();
+  if(raceRect.top < 0){
+    scrollTriggerEls[0].init();
+    scrollTriggerEls[0].triggered = true;
+  }
 }
 
+//starts rotation interval
 function raceAutoTimer() {
   if(!isStopped){
     raceTimer = window.setInterval(raceCarousel,8000);
@@ -217,7 +231,7 @@ function raceSwap() {
         raceBtnArray[i].addEventListener("click",raceSelector);
       }
       cur = inc;
-      //start auto race carousel again
+      //start auto race rotation again
       if(isStopped){
         isStopped = false;
         raceAutoTimer();
